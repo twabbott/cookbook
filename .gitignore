@@ -1,3 +1,14 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+#Mac
+.DS_Store
+
+#General
+.vs
+.vscode
+
 # Logs
 logs
 *.log
