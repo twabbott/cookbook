@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Float</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <style>
+    div {
+      padding: 10px;
+      margin: 5px;
+    }
+
+    .left { float: left; }
+    .right { float: right; }
+
+    .container {
+      background-color: rgb(230, 230, 230);
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .blue {
+      color: white;
+      background-color: blue;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }    
+  </style>
+</head>
+<body>
+  <h1>Clearfix Demonstration</h1>
+  <p>
+    This page demonstrates using the so-called "clearfix hack":
+  </p>
+  <pre>
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}  </pre>
+  <p>
+    This ruleset is applied to a parent block element when all child block elements are floating.  Normally,
+    in this situation, the parent item would have no height, and so it collapses vertically. 
+  </p>
+  <p>
+    You can also apply this property to a ruleset, if you're too lazy to remember the example above (I
+    have to look it up every time):
+  </p>
+  <pre>
+    overflow: auto;</pre>
+  <p>
+    The five items below are all floated inside a clearfix container.  The remaining Lorem
+    Ipsum text is there to demonstrate the terrible things that happen if you remove the
+    <code>clearfix</code> class.
+  </p>
+  <div>
+    <button type="button" id="toggle">Click to toggle</button>
+  </div>
+  <div class="container clearfix">
+      <div class="left red">The quick</div>
+      <div class="left yellow">brown</div>
+      <div class="left green">fox jumps</div>
+      <div class="left blue">over the lazy</div>
+      <div class="left white">dogs.</div>
+  </div>
+  <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+      Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+      Nulla 
+  </p>
+  <p>
+      quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent 
+      mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+      Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad 
+      litora torquent per conubia nostra, per inceptos himenaeos. Curabitur 
+      sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. 
+      Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas 
+      mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
+      porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
+      massa. Fusce ac turpis quis ligula lacinia aliquet. 
+  </p>      
+
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+    Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla 
+    quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent 
+    mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+    Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad 
+    litora torquent per conubia nostra, per inceptos himenaeos. Curabitur 
+    sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. 
+    Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas 
+    mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
+    porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
+    massa. Fusce ac turpis quis ligula lacinia aliquet. 
+  </p>
+  <script>
+    const container = document.querySelector('.container');
+
+    document.querySelector('#toggle').addEventListener('click', () => {
+      container.classList.toggle('clearfix');
+    });
+  </script>
+</body>
+</html>
