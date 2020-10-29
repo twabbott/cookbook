@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sticky Menus and Footer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        /* Remove the default margin for the whole document */
+        margin: 0;
+
+        /* Set a font for the whole document */
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .hero {
+        background-image: url('./hero-banner.jpg');
+
+        /* make the image fill the available space */
+        background-size: cover;
+
+        /* Set the vertical size by the width of the viewport */
+        height: 30vw;
+      }
+
+      nav {
+        /* background for whole nav menu */
+        background-color: #4e4e4e;
+        margin: 0;
+
+        /* clearfix hack */
+        overflow: auto;
+
+        /* STICKY!  😁 */
+        position: sticky;
+
+        /* Not sure why this is -1 */
+        top: -1px;
+      }
+
+      nav ul {
+        /* turn off bullets */
+        list-style-type: none;
+
+        /* turn off default margins/padding */
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        /* float all items left */
+        float: left;
+
+        /* Default color for menu items */
+        color: #aaa;
+        background-color: #555;
+      }
+
+      nav ul li a {
+        /* a elements are inline by default */
+        display: block;
+
+        /* Styling individual items */
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        /* mouse-over highlight effect */
+        background-color: #333;
+      }
+
+      .active {
+        /* active menu item (the page you're on) */
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      .right {
+        /* right-aligned items */
+        float: right;
+      }
+
+      main {
+        /* make <main> NOT float around the menu items */
+        clear: both;
+
+        /* Add the default 15px margin we removed from <body> */
+        margin: 15px;
+      }
+
+      footer {
+        color: white;
+        background-color: #4e4e4e;
+        position: sticky;
+        bottom: 0px;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="hero"></div>
+    <nav>
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="right"><a href="#log-in">Sign In</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <p>
+        <em>Make the window skinny and short, or put the browser into mobile
+        emulation mode, then scroll up and down.</em>
+      </p>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
+        quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+        mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+        Vestibulum lacinia arcu eget nulla.
+      </p>
+
+      <p>
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+        lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In
+        scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
+        Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis
+        vel, suscipit quis, luctus non, massa.
+      </p>
+
+      <p>
+        Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus
+        metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque
+        volutpat condimentum velit. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed
+        lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a
+        cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse
+        potenti. Nunc feugiat mi a tellus consequat imperdiet.
+      </p>
+
+      <h1>Vestibulum sapien</h1>
+      <p>
+        Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu
+        magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.
+        Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at
+        interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus
+        orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie
+        dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue
+        congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec
+        lacus nunc, viverra nec, blandit vel, egestas et, augue.
+      </p>
+
+      <p>
+        Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim.
+        Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+        Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed
+        aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis,
+        venenatis tristique, dignissim in, ultrices sit amet, augue. Proin
+        sodales libero eget ante. Nulla quam. Aenean laoreet.
+      </p>
+
+      <h1>Vestibulum nisi lectus</h1>
+      <p>
+        Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut
+        orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed
+        pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus
+        elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris
+        orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in
+        purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivamus
+        consectetuer risus et tortor. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
+        dapibus diam. Sed nisi.
+      </p>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
+        quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+        mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+        Vestibulum lacinia arcu eget nulla.
+      </p>
+
+      <p>
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+        lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In
+        scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
+        Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis
+        vel, suscipit quis, luctus non, massa.
+      </p>
+
+      <p>
+        Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus
+        metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque
+        volutpat condimentum velit. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed
+        lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a
+        cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse
+        potenti. Nunc feugiat mi a tellus consequat imperdiet.
+      </p>
+
+      <h1>Vestibulum sapien</h1>
+      <p>
+        Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu
+        magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.
+        Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at
+        interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus
+        orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie
+        dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue
+        congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec
+        lacus nunc, viverra nec, blandit vel, egestas et, augue.
+      </p>
+
+      <p>
+        Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim.
+        Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+        Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed
+        aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis,
+        venenatis tristique, dignissim in, ultrices sit amet, augue. Proin
+        sodales libero eget ante. Nulla quam. Aenean laoreet.
+      </p>
+
+      <h1>Ut eu diam at pede</h1>
+      <p>
+        Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut
+        orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed
+        pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus
+        elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris
+        orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in
+        purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivamus
+        consectetuer risus et tortor. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
+        dapibus diam. Sed nisi.
+      </p>
+    </main>
+    <footer>
+      Copyright &copy; 2020 &mdash; Tom Abbott
+    </footer>
+  </body>
+</html>
