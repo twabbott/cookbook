@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rajdhani', Arial, Helvetica, sans-serif;
+  /* see if you can find stratum-1-web */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  color: white;
+  background-color: #265D38;
+}
+
+header div {
+  float: left;
+}
+
+div.logo-ul {
+  padding: 15px;
+}
+
+div.title {
+  text-transform: uppercase;
+  font-size: 22pt;
+  padding-top: 25px;
+}
+
+
+
+
+
+
+
+
+main {
+  background-image: url('./img/fulton-library.jpg');
+  flex-basis: 100%;
+  background-size: cover;
+}
+
+main div.login {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+}
+
+main div.login div.login-left {
+  background-color: rgba(255, 255, 255, .80);
+  padding: 60px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+main div.login div.login-right {
+  background-color: white;
+  padding: 60px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #265D38;
+}
+
+input {
+  display: block;
+  font-size: 30px;
+  padding: 5px;
+  color: #265D38;
+  border: 1px solid rgb(67, 112, 82);
+  border-radius: 5px;
+  margin: 5px 0 5px 0;
+  width: 200px;
+}
+
+main div.login div.login-right button {
+  width: 200px;
+  margin-top: 20px;
+}
+
+button {
+  color: white;
+  background-color: #265D38;
+  border: 0;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 12pt;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(40, 129, 70);
+}
+
+.help-link {
+  text-align: right;
+  margin-bottom: 30px;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer section {
+  text-align: center;
+  padding: 15px;
+}
+
+footer section.footer-top-row {
+  font-size: 16pt;
+  color: #265D38;
+}
+
+footer section.footer-top-row span {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer section.footer-bottom-row {
+  color: white;
+  font-size: 12pt;
+  background-color: #265D38;
+  padding: 15px;
+}
+
+footer section.footer-bottom-row span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.spaced-caps {
+  text-transform: uppercase;
+  letter-spacing: 5pt;
+  margin-top: 10px;
+}
+
+.footer-logo {
+  position: absolute;
+  right: 23px;
+  bottom: 23px;  
+}

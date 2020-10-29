@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UVU Login Service</title>
+    <link rel="stylesheet" href="./uvu-login.css" />
+  <body>
+    <header>
+      <div class="logo-ul">
+        <img src="./img/uvu-logo-large.png" />
+      </div>
+      <div class="title">
+        UVU Login Service
+      </div>
+    </header>
+    <main>
+      <div class="login">
+        <div class="login-left">
+          <img src="./img/uvu-logo-wolverines.png" />
+        </div>
+        <div class="login-right">
+          <form name="login" method="post" action="#">
+            <label>
+              UVU ID:
+              <input type="text" name="username" value="12345678" />
+            </label>
+            <div class="help-link">
+              <a href="https://cas.uvu.edu/idlookup/id/lookup">UV ID Lookup</a>
+            </div>
+            <label>
+              Password:
+              <input type="password" name="password" value="password" />
+            </label>
+            <div class="help-link">
+              <a href="https://iam.uvu.edu/pwm/public/ForgottenPassword">Forgot Your Password?</a>
+            </div>
+            <button type="button" id="signInBtn">Sign In</input>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section class="footer-top-row">
+        <span>IT Service Desk</span>
+        <span>|</span>
+        <span>
+          <a href="mailto:servicedesk@uvu.edu">servicedesk@uvu.edu</a>
+        </span>
+        <span>|</span>
+        <span>801.863.8888</span>
+        <span>|</span>
+        <span>Room BA-007</span>
+      </section>
+      <section class="footer-bottom-row">
+        <div>
+          <span>800 West University Parkway, Orem, UT 84058</span>
+          <span>|</span>
+          <span>(801) 863-8888</span>
+          <span>|</span>
+          <span>Copyright &copy; 2020</span>
+          <span>|</span>
+          <span>Disclaimers & Legal</span>
+        </div>
+        <div class="spaced-caps">
+          Utah Valley University
+        </div>
+        <div class="footer-logo">
+          <img src="./img/uvu-logo-small.png" />
+        </div>
+      </section>
+    </footer>
+    <script>
+      document.querySelector('#signInBtn').addEventListener('click', () => alert('Go, Wolverines!'));
+    </script>
+  </body>
+</html>

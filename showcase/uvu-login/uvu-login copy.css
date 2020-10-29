@@ -1,0 +1,65 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* see if you can find stratum-1-web */
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  color: white;
+  background-color: #265D38;
+  overflow: auto;
+}
+
+header div {
+  float: left;
+}
+
+div.logo-ul {
+  padding: 15px;
+}
+
+div.title {
+  text-transform: uppercase;
+  font-size: 19pt;
+  padding-top: 30px;
+}
+
+main {
+  background-color: blue;
+  height: 100vh;
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+footer section {
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+section.footer-top-row {
+}
+
+section.footer-bottom-row {
+  background-color: #265D38;
+}
+
+.footer-logo {
+  position: absolute;
+  right: 20px;
+  bottom: 14px;  
+}

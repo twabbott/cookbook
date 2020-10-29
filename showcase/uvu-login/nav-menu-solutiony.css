@@ -1,0 +1,67 @@
+body {
+  /* Remove the default margin for the whole document */
+  margin: 0;
+
+  /* Set a font for the whole document */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+
+  /* background for whole nav menu */
+  background-color: #4e4e4e;
+
+  /* clearfix hack */
+  overflow: auto;
+}
+
+nav ul {
+  /* turn off bullets */
+  list-style-type: none;
+
+  /* turn off default margins/padding */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  /* float all items left */
+  float: left;
+  padding: 10px;
+
+  /* Default color for menu items */
+  color: #aaa;
+  background-color: #555;
+}
+
+nav ul li a {
+  /* Styling individual items */
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  /* mouse-over highlight effect */
+  background-color: #333;
+}
+
+.active {
+  /* active menu item (the page you're on) */
+  background-color: #4CAF50;
+  color: white;
+}
+
+.right {
+  /* right-aligned items */
+  float: right;
+}
+
+main {
+  /* make <main> NOT float around the menu items */
+  clear: both;
+
+  /* Add the default 15px margin we removed from <body> */
+  margin: 15px;
+}
