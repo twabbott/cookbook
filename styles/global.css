@@ -1,0 +1,18 @@
+body {
+  /* Set a font for the whole document */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+  background-color: #e4e4e4;
+  font-size: 1.3em;
+  padding: 0 3px 1px 3px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #e4e4e4;
+  margin-left: .5in;
+  padding: 5px;
+  border-radius: 3px;
+}
